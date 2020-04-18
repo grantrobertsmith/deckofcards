@@ -77,18 +77,6 @@
             </form>
 
             <br>
-            <br>
-
-            <div style="">
-              <a href="/table_top/<%=@current_game.id%>" class="btn btn-block btn-outline-secondary" style="
-                  background-color:red;
-                  color:white;
-                  font-size:30px;">
-                The gang's all here, let's begin!
-              </a>
-            </div>
-
-            <br>
 
             <div style="">
               <a href="/delete_game/<%=@current_game.id%>" class="btn btn-block btn-outline-secondary" style="
@@ -103,6 +91,17 @@
               <img src="<%= Card.first.back_image %>" height=200>
             </div>
           <%end%>
+
+        <br>
+
+        <div style="">
+          <a href="/table_top/<%=@current_game.id%>" class="btn btn-block btn-outline-secondary" style="
+              background-color:red;
+              color:white;
+              font-size:30px;">
+            The gang's all here, let's begin!
+          </a>
+        </div>
 
       <%end%>
     </div>
