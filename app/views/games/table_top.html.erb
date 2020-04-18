@@ -16,8 +16,7 @@
         </button>
       </form>
     </div>
-    <% end %>
-    <% if @table_cards.length() > 2 and @table_cards.length() < 5 %>
+    <% elsif @table_cards.length() > 2 and @table_cards.length() < 5 %>
     <div class="col-md-3">
       <form action="/turn_river" method="post">
         <button>
@@ -130,4 +129,16 @@
     </div>
   </div>
   <% end %>
+
+  <hr>
+
+  <div class="row mb-2">
+    <div class="col-md-12">
+      <form action="/leave_table" method="post" onsubmit="return confirm('Are you sure you abandon your post?');">
+        <button>
+          Leave Table
+        </button>
+      </form>
+    </div>
+  </div>
 </body>

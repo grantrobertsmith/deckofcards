@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   # UPDATE
   
   post("/modify_game/:path_id", { :controller => "games", :action => "update" })
+  post("/leave_table", { :controller => "games", :action => "leave_table"})
   
   # DELETE
   get("/delete_game/:path_id", { :controller => "games", :action => "destroy" })

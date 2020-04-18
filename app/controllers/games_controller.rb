@@ -62,6 +62,13 @@ class GamesController < ApplicationController
     redirect_to("/table_top/" + game_id.to_s)
   end
 
+  def leave_table
+    player = Player.where({ :id => session.fetch(:player_id)}).at(0)
+    player.current_game_id = nil
+    player.save
+    render({ :template => "games/create_or_join.html.erb"})
+  end
+
   def index
     @games = Game.all.order({ :created_at => :desc })
 
